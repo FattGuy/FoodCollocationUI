@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        disNavAppear()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +33,9 @@ class HomeViewController: UIViewController {
     }
     */
 
+    func disNavAppear() {
+        self.navigationController?.navigationBar.translucent = true
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
 }
