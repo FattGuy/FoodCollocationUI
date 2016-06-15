@@ -100,12 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				F208BBF81D11D21A00C9E957 /* AppDelegate.swift */,
-				F208BBFC1D11D21A00C9E957 /* Main.storyboard */,
+				F208BC2A1D11FC3200C9E957 /* Storyboards */,
 				F208BBFF1D11D21A00C9E957 /* Assets.xcassets */,
 				F208BC011D11D21A00C9E957 /* LaunchScreen.storyboard */,
 				F208BC041D11D21A00C9E957 /* Info.plist */,
-				F208BC261D11D9BE00C9E957 /* HomeViewController.swift */,
-				F208BC281D11D9E400C9E957 /* NavigationViewController.swift */,
 			);
 			path = FoodCollocationUI;
 			sourceTree = "<group>";
@@ -126,6 +124,24 @@
 				F208BC1A1D11D21A00C9E957 /* Info.plist */,
 			);
 			path = FoodCollocationUIUITests;
+			sourceTree = "<group>";
+		};
+		F208BC2A1D11FC3200C9E957 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F208BC2B1D11FC4300C9E957 /* Home */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		F208BC2B1D11FC4300C9E957 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F208BBFC1D11D21A00C9E957 /* Main.storyboard */,
+				F208BC261D11D9BE00C9E957 /* HomeViewController.swift */,
+				F208BC281D11D9E400C9E957 /* NavigationViewController.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

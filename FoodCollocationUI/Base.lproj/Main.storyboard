@@ -20,40 +20,125 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HF2-dt-VRa">
                                 <rect key="frame" x="0.0" y="20" width="600" height="180"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Pnc-qu-0kG"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-f9-L3G">
+                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="left stack" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-f9-L3G">
                                 <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vew-2O-9fQ" userLabel="Healthy">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Healthy"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7c-jZ-0NP">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Tasty"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxh-Zr-9AG" userLabel="TBD1">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="TBD1"/>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="ijX-Kv-bc9"/>
+                                    <constraint firstItem="Wxh-Zr-9AG" firstAttribute="width" secondItem="vew-2O-9fQ" secondAttribute="width" id="90h-OS-dKo"/>
+                                    <constraint firstItem="Wxh-Zr-9AG" firstAttribute="height" secondItem="vew-2O-9fQ" secondAttribute="height" id="Hl1-zU-WX8"/>
+                                    <constraint firstItem="V7c-jZ-0NP" firstAttribute="height" secondItem="vew-2O-9fQ" secondAttribute="height" id="Kkh-TR-Fq4"/>
+                                    <constraint firstItem="V7c-jZ-0NP" firstAttribute="width" secondItem="vew-2O-9fQ" secondAttribute="width" id="fOc-gO-mB2"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="ijX-Kv-bc9"/>
+                                        <exclude reference="Kkh-TR-Fq4"/>
+                                        <exclude reference="fOc-gO-mB2"/>
+                                        <exclude reference="90h-OS-dKo"/>
+                                        <exclude reference="Hl1-zU-WX8"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <exclude reference="ijX-Kv-bc9"/>
+                                        <include reference="Kkh-TR-Fq4"/>
+                                        <include reference="fOc-gO-mB2"/>
+                                        <include reference="90h-OS-dKo"/>
+                                        <include reference="Hl1-zU-WX8"/>
                                     </mask>
                                 </variation>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DXH-9O-XSr">
+                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="right stack" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DXH-9O-XSr">
                                 <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAi-Zs-0yH">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="167" id="29K-EJ-HTY"/>
+                                        </constraints>
+                                        <state key="normal" title="TBD2"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="29K-EJ-HTY"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="29K-EJ-HTY"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vv7-Kb-jqm">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="167" id="fbx-9v-lGa"/>
+                                        </constraints>
+                                        <state key="normal" title="TBD3"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fbx-9v-lGa"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="fbx-9v-lGa"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckE-GZ-cb6">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="167" id="wfX-2q-ioS"/>
+                                        </constraints>
+                                        <state key="normal" title="TBD4"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="wfX-2q-ioS"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="wfX-2q-ioS"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="177" id="9Ai-iG-brv"/>
+                                    <constraint firstItem="ckE-GZ-cb6" firstAttribute="height" secondItem="hAi-Zs-0yH" secondAttribute="height" id="Ska-7h-Glk"/>
+                                    <constraint firstItem="vv7-Kb-jqm" firstAttribute="height" secondItem="hAi-Zs-0yH" secondAttribute="height" id="pd7-Fz-3oI"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="9Ai-iG-brv"/>
+                                        <exclude reference="pd7-Fz-3oI"/>
+                                        <exclude reference="Ska-7h-Glk"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <exclude reference="9Ai-iG-brv"/>
+                                        <include reference="pd7-Fz-3oI"/>
+                                        <include reference="Ska-7h-Glk"/>
                                     </mask>
                                 </variation>
                             </stackView>
@@ -63,7 +148,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="dia-zR-AAS"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Submit"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="dia-zR-AAS"/>
@@ -147,6 +233,15 @@
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="TBD1Button" destination="Wxh-Zr-9AG" id="aUq-1H-9Ge"/>
+                        <outlet property="TBD2Button" destination="hAi-Zs-0yH" id="8RP-ic-vU0"/>
+                        <outlet property="TBD3Button" destination="vv7-Kb-jqm" id="Ael-ux-8Nj"/>
+                        <outlet property="TBD4Button" destination="ckE-GZ-cb6" id="aSY-0L-BEX"/>
+                        <outlet property="healtyButton" destination="vew-2O-9fQ" id="dB7-Jr-MQ2"/>
+                        <outlet property="submitButton" destination="LY0-nk-G5C" id="j3M-Kr-W5s"/>
+                        <outlet property="tastyButton" destination="V7c-jZ-0NP" id="soN-LI-k1F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

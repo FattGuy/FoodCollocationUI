@@ -10,11 +10,23 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    
+    @IBOutlet weak var healtyButton: UIButton!
+    @IBOutlet weak var tastyButton: UIButton!
+    @IBOutlet weak var TBD1Button: UIButton!
+    @IBOutlet weak var TBD2Button: UIButton!
+    @IBOutlet weak var TBD3Button: UIButton!
+    @IBOutlet weak var TBD4Button: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
+    
+    var choiseButtons = [UIButton]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         disNavAppear()
+        frameButtons()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,5 +49,12 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.translucent = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    func frameButtons() {
+        self.choiseButtons = [healtyButton,tastyButton,TBD1Button,TBD2Button,TBD3Button,TBD4Button,submitButton]
+        for button in choiseButtons {
+            button.layer.cornerRadius = 2.5
+            button.layer.borderWidth = 0.5
+        }
     }
 }
