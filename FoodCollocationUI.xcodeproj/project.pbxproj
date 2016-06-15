@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F208BBF91D11D21A00C9E957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208BBF81D11D21A00C9E957 /* AppDelegate.swift */; };
-		F208BBFB1D11D21A00C9E957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208BBFA1D11D21A00C9E957 /* ViewController.swift */; };
 		F208BBFE1D11D21A00C9E957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F208BBFC1D11D21A00C9E957 /* Main.storyboard */; };
 		F208BC001D11D21A00C9E957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F208BBFF1D11D21A00C9E957 /* Assets.xcassets */; };
 		F208BC031D11D21A00C9E957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F208BC011D11D21A00C9E957 /* LaunchScreen.storyboard */; };
 		F208BC0E1D11D21A00C9E957 /* FoodCollocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208BC0D1D11D21A00C9E957 /* FoodCollocationUITests.swift */; };
 		F208BC191D11D21A00C9E957 /* FoodCollocationUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208BC181D11D21A00C9E957 /* FoodCollocationUIUITests.swift */; };
+		F208BC271D11D9BE00C9E957 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208BC261D11D9BE00C9E957 /* HomeViewController.swift */; };
+		F208BC291D11D9E400C9E957 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208BC281D11D9E400C9E957 /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		F208BBF51D11D21A00C9E957 /* FoodCollocationUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodCollocationUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F208BBF81D11D21A00C9E957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F208BBFA1D11D21A00C9E957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F208BBFD1D11D21A00C9E957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F208BBFF1D11D21A00C9E957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F208BC021D11D21A00C9E957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		F208BC141D11D21A00C9E957 /* FoodCollocationUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodCollocationUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F208BC181D11D21A00C9E957 /* FoodCollocationUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollocationUIUITests.swift; sourceTree = "<group>"; };
 		F208BC1A1D11D21A00C9E957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F208BC261D11D9BE00C9E957 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F208BC281D11D9E400C9E957 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				F208BBF81D11D21A00C9E957 /* AppDelegate.swift */,
-				F208BBFA1D11D21A00C9E957 /* ViewController.swift */,
 				F208BBFC1D11D21A00C9E957 /* Main.storyboard */,
 				F208BBFF1D11D21A00C9E957 /* Assets.xcassets */,
 				F208BC011D11D21A00C9E957 /* LaunchScreen.storyboard */,
 				F208BC041D11D21A00C9E957 /* Info.plist */,
+				F208BC261D11D9BE00C9E957 /* HomeViewController.swift */,
+				F208BC281D11D9E400C9E957 /* NavigationViewController.swift */,
 			);
 			path = FoodCollocationUI;
 			sourceTree = "<group>";
@@ -256,8 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F208BBFB1D11D21A00C9E957 /* ViewController.swift in Sources */,
+				F208BC291D11D9E400C9E957 /* NavigationViewController.swift in Sources */,
 				F208BBF91D11D21A00C9E957 /* AppDelegate.swift in Sources */,
+				F208BC271D11D9BE00C9E957 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
