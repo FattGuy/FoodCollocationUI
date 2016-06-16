@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x0Q-RJ-yuU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ESq-HP-YUX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,11 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HF2-dt-VRa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="home_top_imageview" translatesAutoresizingMaskIntoConstraints="NO" id="HF2-dt-VRa">
                                 <rect key="frame" x="0.0" y="20" width="600" height="180"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="Pnc-qu-0kG"/>
+                                    <constraint firstAttribute="height" constant="180" id="Pnc-qu-0kG">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="102"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="left stack" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-f9-L3G">
@@ -31,17 +33,17 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vew-2O-9fQ" userLabel="Healthy">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Healthy"/>
+                                        <state key="normal" title="Meat"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7c-jZ-0NP">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Tasty"/>
+                                        <state key="normal" title="Carb"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxh-Zr-9AG" userLabel="TBD1">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="TBD1"/>
+                                        <state key="normal" title="Supp"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -76,7 +78,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="167" id="29K-EJ-HTY"/>
                                         </constraints>
-                                        <state key="normal" title="TBD2"/>
+                                        <state key="normal" title="Vege"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="29K-EJ-HTY"/>
@@ -94,7 +96,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="167" id="fbx-9v-lGa"/>
                                         </constraints>
-                                        <state key="normal" title="TBD3"/>
+                                        <state key="normal" title="Fat"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="fbx-9v-lGa"/>
@@ -112,7 +114,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="167" id="wfX-2q-ioS"/>
                                         </constraints>
-                                        <state key="normal" title="TBD4"/>
+                                        <state key="normal" title="Snack"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="wfX-2q-ioS"/>
@@ -131,14 +133,14 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="pd7-Fz-3oI"/>
                                         <exclude reference="Ska-7h-Glk"/>
+                                        <exclude reference="pd7-Fz-3oI"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="pd7-Fz-3oI"/>
                                         <include reference="Ska-7h-Glk"/>
+                                        <include reference="pd7-Fz-3oI"/>
                                     </mask>
                                 </variation>
                             </stackView>
@@ -162,15 +164,19 @@
                                 </variation>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LY0-nk-G5C" secondAttribute="trailing" id="05q-92-qh7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LY0-nk-G5C" secondAttribute="bottom" constant="20" id="3Fl-wd-cnh"/>
                             <constraint firstAttribute="trailing" secondItem="HF2-dt-VRa" secondAttribute="trailing" id="Chi-6K-TKp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="LY0-nk-G5C" secondAttribute="leading" id="TNj-rO-s2Z"/>
-                            <constraint firstItem="Zez-f9-L3G" firstAttribute="top" secondItem="HF2-dt-VRa" secondAttribute="bottom" constant="8" id="WkW-xP-Ymz"/>
+                            <constraint firstItem="Zez-f9-L3G" firstAttribute="top" secondItem="HF2-dt-VRa" secondAttribute="bottom" constant="8" id="WkW-xP-Ymz">
+                                <variation key="heightClass=regular-widthClass=compact" constant="86"/>
+                            </constraint>
                             <constraint firstItem="HF2-dt-VRa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XGx-KZ-8E3"/>
-                            <constraint firstItem="DXH-9O-XSr" firstAttribute="top" secondItem="HF2-dt-VRa" secondAttribute="bottom" constant="8" id="bfN-n4-pmo"/>
+                            <constraint firstItem="DXH-9O-XSr" firstAttribute="top" secondItem="HF2-dt-VRa" secondAttribute="bottom" constant="8" id="bfN-n4-pmo">
+                                <variation key="heightClass=regular-widthClass=compact" constant="86"/>
+                            </constraint>
                             <constraint firstItem="LY0-nk-G5C" firstAttribute="top" secondItem="DXH-9O-XSr" secondAttribute="bottom" constant="8" id="pip-pK-9aT"/>
                             <constraint firstItem="LY0-nk-G5C" firstAttribute="top" secondItem="Zez-f9-L3G" secondAttribute="bottom" constant="8" id="qKd-Ks-Rz2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DXH-9O-XSr" secondAttribute="trailing" id="sCU-FZ-n28"/>
@@ -188,20 +194,20 @@
                                 <exclude reference="LY0-nk-G5C"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Chi-6K-TKp"/>
-                                <exclude reference="XGx-KZ-8E3"/>
-                                <exclude reference="vvT-JF-30s"/>
-                                <exclude reference="WkW-xP-Ymz"/>
-                                <exclude reference="uQk-FV-9fe"/>
-                                <exclude reference="yJF-1K-ZIC"/>
-                                <exclude reference="bfN-n4-pmo"/>
-                                <exclude reference="sCU-FZ-n28"/>
-                                <exclude reference="sPn-AJ-WEL"/>
+                                <exclude reference="3Fl-wd-cnh"/>
                                 <exclude reference="05q-92-qh7"/>
                                 <exclude reference="TNj-rO-s2Z"/>
                                 <exclude reference="pip-pK-9aT"/>
                                 <exclude reference="qKd-Ks-Rz2"/>
-                                <exclude reference="3Fl-wd-cnh"/>
+                                <exclude reference="bfN-n4-pmo"/>
+                                <exclude reference="sCU-FZ-n28"/>
+                                <exclude reference="sPn-AJ-WEL"/>
+                                <exclude reference="WkW-xP-Ymz"/>
+                                <exclude reference="uQk-FV-9fe"/>
+                                <exclude reference="yJF-1K-ZIC"/>
+                                <exclude reference="Chi-6K-TKp"/>
+                                <exclude reference="XGx-KZ-8E3"/>
+                                <exclude reference="vvT-JF-30s"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -211,20 +217,20 @@
                                 <include reference="LY0-nk-G5C"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Chi-6K-TKp"/>
-                                <include reference="XGx-KZ-8E3"/>
-                                <include reference="vvT-JF-30s"/>
-                                <include reference="WkW-xP-Ymz"/>
-                                <include reference="uQk-FV-9fe"/>
-                                <include reference="yJF-1K-ZIC"/>
-                                <include reference="bfN-n4-pmo"/>
-                                <include reference="sCU-FZ-n28"/>
-                                <include reference="sPn-AJ-WEL"/>
+                                <include reference="3Fl-wd-cnh"/>
                                 <include reference="05q-92-qh7"/>
                                 <include reference="TNj-rO-s2Z"/>
                                 <include reference="pip-pK-9aT"/>
                                 <include reference="qKd-Ks-Rz2"/>
-                                <include reference="3Fl-wd-cnh"/>
+                                <include reference="bfN-n4-pmo"/>
+                                <include reference="sCU-FZ-n28"/>
+                                <include reference="sPn-AJ-WEL"/>
+                                <include reference="WkW-xP-Ymz"/>
+                                <include reference="uQk-FV-9fe"/>
+                                <include reference="yJF-1K-ZIC"/>
+                                <include reference="Chi-6K-TKp"/>
+                                <include reference="XGx-KZ-8E3"/>
+                                <include reference="vvT-JF-30s"/>
                             </mask>
                         </variation>
                     </view>
@@ -241,32 +247,78 @@
                         <outlet property="healtyButton" destination="vew-2O-9fQ" id="dB7-Jr-MQ2"/>
                         <outlet property="submitButton" destination="LY0-nk-G5C" id="j3M-Kr-W5s"/>
                         <outlet property="tastyButton" destination="V7c-jZ-0NP" id="soN-LI-k1F"/>
+                        <segue destination="nZw-bf-4pZ" kind="presentation" id="l82-Kj-JpX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="552"/>
+            <point key="canvasLocation" x="1275" y="548.25"/>
         </scene>
-        <!--Navigation View Controller-->
-        <scene sceneID="3N7-gz-WDi">
+        <!--Ingredients View Controller-->
+        <scene sceneID="6Hc-7B-5OG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x0Q-RJ-yuU" customClass="NavigationViewController" customModule="FoodCollocationUI" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="8zj-dx-pmJ" customClass="IngredientsViewController" customModule="FoodCollocationUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="U1R-De-T0C">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DJX-jt-0iX">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DJX-jt-0iX" id="uBZ-9b-1pE">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8zj-dx-pmJ" id="OYf-kf-sze"/>
+                            <outlet property="delegate" destination="8zj-dx-pmJ" id="6f7-dP-MPB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hCA-L9-G1e"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4CS-BL-BkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2863.5" y="548.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tz5-nf-bMj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nZw-bf-4pZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x8y-Y3-xPB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z0s-uc-vf3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vze-99-VYZ"/>
+                        <segue destination="8zj-dx-pmJ" kind="relationship" relationship="rootViewController" id="Y2X-TO-W1U"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mel-oW-dpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mta-Gi-d6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="552"/>
+            <point key="canvasLocation" x="2110.5" y="548.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DUk-Av-NpY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ESq-HP-YUX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1C3-gY-svq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UWb-Ex-0iN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zPm-yy-wtP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="357" y="548.25"/>
         </scene>
     </scenes>
     <resources>
         <image name="home_menu_bar_button" width="30" height="30"/>
+        <image name="home_top_imageview" width="3518" height="607"/>
     </resources>
 </document>
