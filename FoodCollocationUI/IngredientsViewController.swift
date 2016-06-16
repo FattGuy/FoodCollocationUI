@@ -9,7 +9,9 @@
 import UIKit
 
 class IngredientsViewController: UITableViewController {
-
+    
+    @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,7 +19,7 @@ class IngredientsViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //self.navigationItem.leftBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +38,15 @@ class IngredientsViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-
+    
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        self.performSegueWithIdentifier("toDetail", sender: indexPath)
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//    }
+    
+    @IBAction func addBarButtonItemPressed(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("toDetail", sender: sender)
+    }
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)

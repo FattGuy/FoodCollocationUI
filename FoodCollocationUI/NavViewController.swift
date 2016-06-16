@@ -1,14 +1,14 @@
 //
-//  NavigationViewController.swift
+//  NavViewController.swift
 //  FoodCollocationUI
 //
-//  Created by Feng Chang on 6/15/16.
+//  Created by Feng Chang on 6/16/16.
 //  Copyright © 2016 Feng Chang. All rights reserved.
 //
 
 import UIKit
 
-class NavigationViewController: UINavigationController {
+class NavViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,7 @@ class NavigationViewController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
+
     /*
     // MARK: - Navigation
 

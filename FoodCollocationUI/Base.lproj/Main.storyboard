@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ESq-HP-YUX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xSh-b9-sp0">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -34,6 +34,10 @@
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Meat"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uvp-SN-h3c"/>
+                                            <segue destination="8zj-dx-pmJ" kind="show" identifier="toIngredientSegue" id="C6f-Ek-x58"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7c-jZ-0NP">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -194,20 +198,20 @@
                                 <exclude reference="LY0-nk-G5C"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3Fl-wd-cnh"/>
+                                <exclude reference="Chi-6K-TKp"/>
+                                <exclude reference="XGx-KZ-8E3"/>
+                                <exclude reference="vvT-JF-30s"/>
+                                <exclude reference="WkW-xP-Ymz"/>
+                                <exclude reference="uQk-FV-9fe"/>
+                                <exclude reference="yJF-1K-ZIC"/>
+                                <exclude reference="bfN-n4-pmo"/>
+                                <exclude reference="sCU-FZ-n28"/>
+                                <exclude reference="sPn-AJ-WEL"/>
                                 <exclude reference="05q-92-qh7"/>
                                 <exclude reference="TNj-rO-s2Z"/>
                                 <exclude reference="pip-pK-9aT"/>
                                 <exclude reference="qKd-Ks-Rz2"/>
-                                <exclude reference="bfN-n4-pmo"/>
-                                <exclude reference="sCU-FZ-n28"/>
-                                <exclude reference="sPn-AJ-WEL"/>
-                                <exclude reference="WkW-xP-Ymz"/>
-                                <exclude reference="uQk-FV-9fe"/>
-                                <exclude reference="yJF-1K-ZIC"/>
-                                <exclude reference="Chi-6K-TKp"/>
-                                <exclude reference="XGx-KZ-8E3"/>
-                                <exclude reference="vvT-JF-30s"/>
+                                <exclude reference="3Fl-wd-cnh"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -217,20 +221,20 @@
                                 <include reference="LY0-nk-G5C"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3Fl-wd-cnh"/>
+                                <include reference="Chi-6K-TKp"/>
+                                <include reference="XGx-KZ-8E3"/>
+                                <include reference="vvT-JF-30s"/>
+                                <include reference="WkW-xP-Ymz"/>
+                                <include reference="uQk-FV-9fe"/>
+                                <include reference="yJF-1K-ZIC"/>
+                                <include reference="bfN-n4-pmo"/>
+                                <include reference="sCU-FZ-n28"/>
+                                <include reference="sPn-AJ-WEL"/>
                                 <include reference="05q-92-qh7"/>
                                 <include reference="TNj-rO-s2Z"/>
                                 <include reference="pip-pK-9aT"/>
                                 <include reference="qKd-Ks-Rz2"/>
-                                <include reference="bfN-n4-pmo"/>
-                                <include reference="sCU-FZ-n28"/>
-                                <include reference="sPn-AJ-WEL"/>
-                                <include reference="WkW-xP-Ymz"/>
-                                <include reference="uQk-FV-9fe"/>
-                                <include reference="yJF-1K-ZIC"/>
-                                <include reference="Chi-6K-TKp"/>
-                                <include reference="XGx-KZ-8E3"/>
-                                <include reference="vvT-JF-30s"/>
+                                <include reference="3Fl-wd-cnh"/>
                             </mask>
                         </variation>
                     </view>
@@ -247,24 +251,26 @@
                         <outlet property="healtyButton" destination="vew-2O-9fQ" id="dB7-Jr-MQ2"/>
                         <outlet property="submitButton" destination="LY0-nk-G5C" id="j3M-Kr-W5s"/>
                         <outlet property="tastyButton" destination="V7c-jZ-0NP" id="soN-LI-k1F"/>
-                        <segue destination="nZw-bf-4pZ" kind="presentation" id="l82-Kj-JpX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="548.25"/>
+            <point key="canvasLocation" x="3015" y="548.25"/>
         </scene>
         <!--Ingredients View Controller-->
         <scene sceneID="6Hc-7B-5OG">
             <objects>
                 <tableViewController id="8zj-dx-pmJ" customClass="IngredientsViewController" customModule="FoodCollocationUI" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="U1R-De-T0C">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="U1R-De-T0C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DJX-jt-0iX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientCell" rowHeight="50" id="DJX-jt-0iX">
+                                <rect key="frame" x="0.0" y="92" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DJX-jt-0iX" id="uBZ-9b-1pE">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -274,47 +280,58 @@
                             <outlet property="delegate" destination="8zj-dx-pmJ" id="6f7-dP-MPB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hCA-L9-G1e"/>
+                    <navigationItem key="navigationItem" id="hCA-L9-G1e">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ev6-qe-9bT">
+                            <connections>
+                                <action selector="addBarButtonItemPressed:" destination="8zj-dx-pmJ" id="8uM-1r-m6J"/>
+                                <segue destination="xaP-d4-xFv" kind="show" id="lN7-hq-rya"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addBarButtonItem" destination="ev6-qe-9bT" id="vs7-XZ-Tde"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CS-BL-BkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2863.5" y="548.25"/>
+            <point key="canvasLocation" x="3781.5" y="548.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2T8-8p-GH9">
+            <objects>
+                <viewController id="xaP-d4-xFv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W5O-wT-mrr"/>
+                        <viewControllerLayoutGuide type="bottom" id="jZV-e7-xZS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QCY-95-kZq">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbz-7V-doF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4611" y="548.25"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Tz5-nf-bMj">
+        <scene sceneID="ipH-sM-xsd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nZw-bf-4pZ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xSh-b9-sp0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z0s-uc-vf3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hcs-Sq-VcF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8zj-dx-pmJ" kind="relationship" relationship="rootViewController" id="Y2X-TO-W1U"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KV8-ZO-roD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mta-Gi-d6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kah-UD-leP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2110.5" y="548.25"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="DUk-Av-NpY">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ESq-HP-YUX" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1C3-gY-svq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UWb-Ex-0iN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zPm-yy-wtP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="357" y="548.25"/>
+            <point key="canvasLocation" x="2097" y="548.25"/>
         </scene>
     </scenes>
     <resources>

@@ -34,6 +34,9 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func buttonPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("toIngredientSegue", sender: nil)
+    }
 
     /*
     // MARK: - Navigation
