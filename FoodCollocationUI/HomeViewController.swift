@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
+    
     func disNavAppear() {
         self.navigationController?.navigationBar.translucent = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
