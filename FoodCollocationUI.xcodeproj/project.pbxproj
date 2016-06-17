@@ -15,8 +15,9 @@
 		F208BC0E1D11D21A00C9E957 /* FoodCollocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208BC0D1D11D21A00C9E957 /* FoodCollocationUITests.swift */; };
 		F208BC191D11D21A00C9E957 /* FoodCollocationUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208BC181D11D21A00C9E957 /* FoodCollocationUIUITests.swift */; };
 		F208BC271D11D9BE00C9E957 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208BC261D11D9BE00C9E957 /* HomeViewController.swift */; };
-		F2C2B6671D12FCEB00FFC906 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B6661D12FCEB00FFC906 /* IngredientsViewController.swift */; };
-		F2C2B66A1D1305FA00FFC906 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B6691D1305FA00FFC906 /* NavViewController.swift */; };
+		F285E1881D145D280007AEB1 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285E1871D145D280007AEB1 /* BaseNavController.swift */; };
+		F285E18A1D145D570007AEB1 /* IngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285E1891D145D570007AEB1 /* IngredientViewController.swift */; };
+		F2B315391D147C1F0055AB20 /* CategoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B315381D147C1F0055AB20 /* CategoryDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +54,9 @@
 		F208BC181D11D21A00C9E957 /* FoodCollocationUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollocationUIUITests.swift; sourceTree = "<group>"; };
 		F208BC1A1D11D21A00C9E957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F208BC261D11D9BE00C9E957 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F2C2B6661D12FCEB00FFC906 /* IngredientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
-		F2C2B6691D1305FA00FFC906 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
+		F285E1871D145D280007AEB1 /* BaseNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
+		F285E1891D145D570007AEB1 /* IngredientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientViewController.swift; sourceTree = "<group>"; };
+		F2B315381D147C1F0055AB20 /* CategoryDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		F208BC2A1D11FC3200C9E957 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				F2B2C4411D134D100059E39C /* View */,
 				F2C2B6681D1305E100FFC906 /* Nav */,
 				F2C2B6651D12FC1200FFC906 /* Ingredients */,
 				F208BC2B1D11FC4300C9E957 /* Home */,
@@ -165,16 +168,32 @@
 		F208BC2B1D11FC4300C9E957 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F208BBFC1D11D21A00C9E957 /* Main.storyboard */,
 				F208BC261D11D9BE00C9E957 /* HomeViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
 		};
+		F2B2C4411D134D100059E39C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F208BBFC1D11D21A00C9E957 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F2B315371D147C090055AB20 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F2B315381D147C1F0055AB20 /* CategoryDetailCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		F2C2B6651D12FC1200FFC906 /* Ingredients */ = {
 			isa = PBXGroup;
 			children = (
-				F2C2B6661D12FCEB00FFC906 /* IngredientsViewController.swift */,
+				F2B315371D147C090055AB20 /* Cell */,
+				F285E1891D145D570007AEB1 /* IngredientViewController.swift */,
 			);
 			name = Ingredients;
 			sourceTree = "<group>";
@@ -182,7 +201,7 @@
 		F2C2B6681D1305E100FFC906 /* Nav */ = {
 			isa = PBXGroup;
 			children = (
-				F2C2B6691D1305FA00FFC906 /* NavViewController.swift */,
+				F285E1871D145D280007AEB1 /* BaseNavController.swift */,
 			);
 			name = Nav;
 			sourceTree = "<group>";
@@ -369,9 +388,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2C2B6671D12FCEB00FFC906 /* IngredientsViewController.swift in Sources */,
 				F208BBF91D11D21A00C9E957 /* AppDelegate.swift in Sources */,
-				F2C2B66A1D1305FA00FFC906 /* NavViewController.swift in Sources */,
+				F2B315391D147C1F0055AB20 /* CategoryDetailCell.swift in Sources */,
+				F285E18A1D145D570007AEB1 /* IngredientViewController.swift in Sources */,
+				F285E1881D145D280007AEB1 /* BaseNavController.swift in Sources */,
 				F208BC271D11D9BE00C9E957 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

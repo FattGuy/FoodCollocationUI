@@ -1,14 +1,14 @@
 //
-//  NavViewController.swift
+//  BaseNavController.swift
 //  FoodCollocationUI
 //
-//  Created by Feng Chang on 6/16/16.
+//  Created by Feng Chang on 6/17/16.
 //  Copyright © 2016 Feng Chang. All rights reserved.
 //
 
 import UIKit
 
-class NavViewController: UINavigationController {
+class BaseNavController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

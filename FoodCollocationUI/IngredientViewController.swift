@@ -1,16 +1,14 @@
 //
-//  IngredientsViewController.swift
+//  IngredientViewController.swift
 //  FoodCollocationUI
 //
-//  Created by Feng Chang on 6/16/16.
+//  Created by Feng Chang on 6/17/16.
 //  Copyright © 2016 Feng Chang. All rights reserved.
 //
 
 import UIKit
 
-class IngredientsViewController: UITableViewController {
-    
-    @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
+class IngredientViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +17,8 @@ class IngredientsViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        //self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,31 +30,21 @@ class IngredientsViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
-    
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.performSegueWithIdentifier("toDetail", sender: indexPath)
-//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//    }
-    
-    @IBAction func addBarButtonItemPressed(sender: UIBarButtonItem) {
-        self.performSegueWithIdentifier("toDetail", sender: sender)
-    }
-    /*
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryDetailCell", forIndexPath: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
