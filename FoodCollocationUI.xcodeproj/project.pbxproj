@@ -17,7 +17,9 @@
 		F208BC271D11D9BE00C9E957 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208BC261D11D9BE00C9E957 /* HomeViewController.swift */; };
 		F285E1881D145D280007AEB1 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285E1871D145D280007AEB1 /* BaseNavController.swift */; };
 		F285E18A1D145D570007AEB1 /* IngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285E1891D145D570007AEB1 /* IngredientViewController.swift */; };
+		F29A72341D18505800BC1E66 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A72331D18505800BC1E66 /* SideMenuViewController.swift */; };
 		F2B315391D147C1F0055AB20 /* CategoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B315381D147C1F0055AB20 /* CategoryDetailCell.swift */; };
+		F2DEA1CE1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DEA1CD1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +58,9 @@
 		F208BC261D11D9BE00C9E957 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F285E1871D145D280007AEB1 /* BaseNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
 		F285E1891D145D570007AEB1 /* IngredientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientViewController.swift; sourceTree = "<group>"; };
+		F29A72331D18505800BC1E66 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		F2B315381D147C1F0055AB20 /* CategoryDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailCell.swift; sourceTree = "<group>"; };
+		F2DEA1CD1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuillotineMenuTransitionAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 		F208BBF71D11D21A00C9E957 /* FoodCollocationUI */ = {
 			isa = PBXGroup;
 			children = (
+				F2DEA1CC1D184CEB00A2E113 /* Lib */,
 				F208BBF81D11D21A00C9E957 /* AppDelegate.swift */,
 				F208BC2A1D11FC3200C9E957 /* Storyboards */,
 				F208BBFF1D11D21A00C9E957 /* Assets.xcassets */,
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				F2B2C4411D134D100059E39C /* View */,
+				F2DEA1C91D1842B400A2E113 /* SideMenu */,
 				F2C2B6681D1305E100FFC906 /* Nav */,
 				F2C2B6651D12FC1200FFC906 /* Ingredients */,
 				F208BC2B1D11FC4300C9E957 /* Home */,
@@ -206,6 +212,22 @@
 			name = Nav;
 			sourceTree = "<group>";
 		};
+		F2DEA1C91D1842B400A2E113 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F29A72331D18505800BC1E66 /* SideMenuViewController.swift */,
+			);
+			name = SideMenu;
+			sourceTree = "<group>";
+		};
+		F2DEA1CC1D184CEB00A2E113 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				F2DEA1CD1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,12 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F208BC1D1D11D21A00C9E957 /* Build configuration list for PBXNativeTarget "FoodCollocationUI" */;
 			buildPhases = (
-				039C60B98584D97E9736F8CF /* 📦 Check Pods Manifest.lock */,
+				039C60B98584D97E9736F8CF /* [CP] Check Pods Manifest.lock */,
 				F208BBF11D11D21A00C9E957 /* Sources */,
 				F208BBF21D11D21A00C9E957 /* Frameworks */,
 				F208BBF31D11D21A00C9E957 /* Resources */,
-				61DEB49D8B249B95DF8C2A1D /* 📦 Embed Pods Frameworks */,
-				208E095F369C808200DE155A /* 📦 Copy Pods Resources */,
+				61DEB49D8B249B95DF8C2A1D /* [CP] Embed Pods Frameworks */,
+				208E095F369C808200DE155A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -336,14 +358,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		039C60B98584D97E9736F8CF /* 📦 Check Pods Manifest.lock */ = {
+		039C60B98584D97E9736F8CF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,14 +373,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		208E095F369C808200DE155A /* 📦 Copy Pods Resources */ = {
+		208E095F369C808200DE155A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,14 +388,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodCollocationUI/Pods-FoodCollocationUI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		61DEB49D8B249B95DF8C2A1D /* 📦 Embed Pods Frameworks */ = {
+		61DEB49D8B249B95DF8C2A1D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,7 +412,9 @@
 			files = (
 				F208BBF91D11D21A00C9E957 /* AppDelegate.swift in Sources */,
 				F2B315391D147C1F0055AB20 /* CategoryDetailCell.swift in Sources */,
+				F2DEA1CE1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift in Sources */,
 				F285E18A1D145D570007AEB1 /* IngredientViewController.swift in Sources */,
+				F29A72341D18505800BC1E66 /* SideMenuViewController.swift in Sources */,
 				F285E1881D145D280007AEB1 /* BaseNavController.swift in Sources */,
 				F208BC271D11D9BE00C9E957 /* HomeViewController.swift in Sources */,
 			);

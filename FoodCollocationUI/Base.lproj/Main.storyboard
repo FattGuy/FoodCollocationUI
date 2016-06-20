@@ -222,23 +222,23 @@
                                 <exclude reference="PZU-ev-Y3m"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Chi-6K-TKp"/>
-                                <exclude reference="XGx-KZ-8E3"/>
-                                <exclude reference="vvT-JF-30s"/>
-                                <exclude reference="aMr-H7-WFc"/>
-                                <exclude reference="eis-2X-Zzm"/>
-                                <exclude reference="qwA-Lt-iKy"/>
-                                <exclude reference="BLf-VB-eME"/>
-                                <exclude reference="uQk-FV-9fe"/>
-                                <exclude reference="yJF-1K-ZIC"/>
-                                <exclude reference="jI3-as-aAz"/>
-                                <exclude reference="sCU-FZ-n28"/>
-                                <exclude reference="sPn-AJ-WEL"/>
+                                <exclude reference="3Fl-wd-cnh"/>
                                 <exclude reference="05q-92-qh7"/>
                                 <exclude reference="TNj-rO-s2Z"/>
                                 <exclude reference="pip-pK-9aT"/>
                                 <exclude reference="qKd-Ks-Rz2"/>
-                                <exclude reference="3Fl-wd-cnh"/>
+                                <exclude reference="aMr-H7-WFc"/>
+                                <exclude reference="eis-2X-Zzm"/>
+                                <exclude reference="qwA-Lt-iKy"/>
+                                <exclude reference="jI3-as-aAz"/>
+                                <exclude reference="sCU-FZ-n28"/>
+                                <exclude reference="sPn-AJ-WEL"/>
+                                <exclude reference="BLf-VB-eME"/>
+                                <exclude reference="uQk-FV-9fe"/>
+                                <exclude reference="yJF-1K-ZIC"/>
+                                <exclude reference="Chi-6K-TKp"/>
+                                <exclude reference="XGx-KZ-8E3"/>
+                                <exclude reference="vvT-JF-30s"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -249,29 +249,32 @@
                                 <include reference="PZU-ev-Y3m"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Chi-6K-TKp"/>
-                                <include reference="XGx-KZ-8E3"/>
-                                <include reference="vvT-JF-30s"/>
-                                <include reference="aMr-H7-WFc"/>
-                                <include reference="eis-2X-Zzm"/>
-                                <include reference="qwA-Lt-iKy"/>
-                                <include reference="BLf-VB-eME"/>
-                                <include reference="uQk-FV-9fe"/>
-                                <include reference="yJF-1K-ZIC"/>
-                                <include reference="jI3-as-aAz"/>
-                                <include reference="sCU-FZ-n28"/>
-                                <include reference="sPn-AJ-WEL"/>
+                                <include reference="3Fl-wd-cnh"/>
                                 <include reference="05q-92-qh7"/>
                                 <include reference="TNj-rO-s2Z"/>
                                 <include reference="pip-pK-9aT"/>
                                 <include reference="qKd-Ks-Rz2"/>
-                                <include reference="3Fl-wd-cnh"/>
+                                <include reference="aMr-H7-WFc"/>
+                                <include reference="eis-2X-Zzm"/>
+                                <include reference="qwA-Lt-iKy"/>
+                                <include reference="jI3-as-aAz"/>
+                                <include reference="sCU-FZ-n28"/>
+                                <include reference="sPn-AJ-WEL"/>
+                                <include reference="BLf-VB-eME"/>
+                                <include reference="uQk-FV-9fe"/>
+                                <include reference="yJF-1K-ZIC"/>
+                                <include reference="Chi-6K-TKp"/>
+                                <include reference="XGx-KZ-8E3"/>
+                                <include reference="vvT-JF-30s"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="tId-Gq-DKf">
                         <barButtonItem key="leftBarButtonItem" image="home_menu_bar_button" id="jVZ-ef-s1Y">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="ceL-8K-JgY" kind="show" id="ZZR-i3-bg9"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -293,12 +296,15 @@
             <objects>
                 <tableViewController id="Fh1-0p-7Vn" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="txT-l4-ms0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eKp-nG-jvo">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKp-nG-jvo" id="6mT-l5-VC3">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -311,7 +317,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaP-TE-tUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3796.5" y="796.5"/>
+            <point key="canvasLocation" x="2571" y="1432.5"/>
         </scene>
         <!--Ingredient View Controller-->
         <scene sceneID="T1c-MN-vmd">
@@ -566,7 +572,92 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKh-WP-d2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3828" y="-162.75"/>
+            <point key="canvasLocation" x="3462" y="1432.5"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="YQ7-Bn-Jc0">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuViewController" id="ceL-8K-JgY" customClass="SideMenuViewController" customModule="FoodCollocationUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mgr-ZB-Vbd"/>
+                        <viewControllerLayoutGuide type="bottom" id="LUZ-Vl-tAY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zLL-sX-aMw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fdy-Zp-ar7">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.75560349225997925" green="0.94411581754684448" blue="0.80391615629196167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="176" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRW-FW-FEQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="MyPlan"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="202" y="186" width="51" height="30"/>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7LC-Sv-Eiu">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="266" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3b9-KX-UYK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="MyStats"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="197" y="276" width="57" height="30"/>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="56j-j6-0GI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="355" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="914-jP-Qbt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Profile"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="203" y="365" width="44" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Fdy-Zp-ar7"/>
+                                <exclude reference="rRW-FW-FEQ"/>
+                                <exclude reference="7LC-Sv-Eiu"/>
+                                <exclude reference="3b9-KX-UYK"/>
+                                <exclude reference="56j-j6-0GI"/>
+                                <exclude reference="914-jP-Qbt"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Fdy-Zp-ar7"/>
+                                <include reference="rRW-FW-FEQ"/>
+                                <include reference="7LC-Sv-Eiu"/>
+                                <include reference="3b9-KX-UYK"/>
+                                <include reference="56j-j6-0GI"/>
+                                <include reference="914-jP-Qbt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu" id="ISY-bS-HzI">
+                        <barButtonItem key="leftBarButtonItem" image="home_menu_bar_button" id="7Ap-nn-ma8"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGZ-aI-wHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4014" y="548.25"/>
         </scene>
         <!--Base Nav Controller-->
         <scene sceneID="ipH-sM-xsd">

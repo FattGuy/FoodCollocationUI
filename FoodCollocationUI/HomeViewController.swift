@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var forBuilderButton: UIButton!
     @IBOutlet weak var forMenButton: UIButton!
@@ -26,6 +26,10 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         disNavAppear()
         frameButtons()
+        
+        let menuViewController = storyboard!.instantiateViewControllerWithIdentifier("SideMenuViewController")
+        menuViewController.modalPresentationStyle = .Custom
+        menuViewController.transitioningDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
