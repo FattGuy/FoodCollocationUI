@@ -147,28 +147,6 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY0-nk-G5C">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.80424375390000002" green="0.27698211849999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="dia-zR-AAS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Find"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="dia-zR-AAS"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="dia-zR-AAS"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="Fh1-0p-7Vn" kind="show" id="M6e-Gl-1NQ"/>
-                                </connections>
-                            </button>
                             <searchBar contentMode="redraw" placeholder="Amount of Calory" translatesAutoresizingMaskIntoConstraints="NO" id="PZU-ev-Y3m">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <constraints>
@@ -191,6 +169,28 @@
                                     </mask>
                                 </variation>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY0-nk-G5C">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.80424375390000002" green="0.27698211849999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="dia-zR-AAS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Find"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dia-zR-AAS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dia-zR-AAS"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="Fh1-0p-7Vn" kind="show" id="oSU-lv-tLP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -218,8 +218,8 @@
                             <mask key="subviews">
                                 <exclude reference="Zez-f9-L3G"/>
                                 <exclude reference="DXH-9O-XSr"/>
-                                <exclude reference="LY0-nk-G5C"/>
                                 <exclude reference="PZU-ev-Y3m"/>
+                                <exclude reference="LY0-nk-G5C"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3Fl-wd-cnh"/>
@@ -245,8 +245,8 @@
                             <mask key="subviews">
                                 <include reference="Zez-f9-L3G"/>
                                 <include reference="DXH-9O-XSr"/>
-                                <include reference="LY0-nk-G5C"/>
                                 <include reference="PZU-ev-Y3m"/>
+                                <include reference="LY0-nk-G5C"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="3Fl-wd-cnh"/>
@@ -298,22 +298,111 @@
             </objects>
             <point key="canvasLocation" x="3015" y="548.25"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Search Result View Controller-->
         <scene sceneID="bKv-zZ-dvT">
             <objects>
-                <tableViewController id="Fh1-0p-7Vn" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="txT-l4-ms0">
+                <tableViewController id="Fh1-0p-7Vn" customClass="SearchResultViewController" customModule="FoodCollocationUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="774" sectionHeaderHeight="28" sectionFooterHeight="28" id="txT-l4-ms0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eKp-nG-jvo">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoldingCell" rowHeight="774" id="eKp-nG-jvo" customClass="SearchResultCell" customModule="FoodCollocationUI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKp-nG-jvo" id="6mT-l5-VC3">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-fL-sYH" userLabel="Content View">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <color key="backgroundColor" red="0.75560349225997925" green="0.94411581754684448" blue="0.80391615629196167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="350" id="5iN-vE-00O"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="5iN-vE-00O"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="5iN-vE-00O"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oli-xY-FoO" customClass="RotatedView" customModule="FoldingCell">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="M7q-Tc-Gy6"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="M7q-Tc-Gy6"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="M7q-Tc-Gy6"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yl4-fL-sYH" firstAttribute="top" secondItem="6mT-l5-VC3" secondAttribute="top" constant="97" identifier="ContainerViewTop" id="EHf-8g-rSf"/>
+                                        <constraint firstItem="Oli-xY-FoO" firstAttribute="top" secondItem="6mT-l5-VC3" secondAttribute="top" constant="8" identifier="foregroundViewTop" id="FGS-XI-rSF"/>
+                                        <constraint firstItem="Oli-xY-FoO" firstAttribute="leading" secondItem="6mT-l5-VC3" secondAttribute="leading" constant="8" id="M7l-vq-m18"/>
+                                        <constraint firstAttribute="trailing" secondItem="yl4-fL-sYH" secondAttribute="trailing" constant="8" id="lDx-Zl-PsV"/>
+                                        <constraint firstItem="yl4-fL-sYH" firstAttribute="leading" secondItem="6mT-l5-VC3" secondAttribute="leading" constant="8" id="oZA-vR-1Ll"/>
+                                        <constraint firstAttribute="trailing" secondItem="Oli-xY-FoO" secondAttribute="trailing" constant="8" id="wJy-GY-OTW"/>
+                                        <constraint firstItem="yl4-fL-sYH" firstAttribute="top" secondItem="Oli-xY-FoO" secondAttribute="bottom" constant="14" id="yhH-Jj-eQC"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="yl4-fL-sYH"/>
+                                            <exclude reference="Oli-xY-FoO"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="FGS-XI-rSF"/>
+                                            <exclude reference="M7l-vq-m18"/>
+                                            <exclude reference="wJy-GY-OTW"/>
+                                            <exclude reference="EHf-8g-rSf"/>
+                                            <exclude reference="lDx-Zl-PsV"/>
+                                            <exclude reference="oZA-vR-1Ll"/>
+                                            <exclude reference="yhH-Jj-eQC"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="yl4-fL-sYH"/>
+                                            <include reference="Oli-xY-FoO"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="FGS-XI-rSF"/>
+                                            <include reference="M7l-vq-m18"/>
+                                            <include reference="wJy-GY-OTW"/>
+                                            <include reference="EHf-8g-rSf"/>
+                                            <include reference="lDx-Zl-PsV"/>
+                                            <include reference="oZA-vR-1Ll"/>
+                                            <include reference="yhH-Jj-eQC"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="itemCount">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="closedCell" destination="Oli-xY-FoO" id="dgf-JP-uaz"/>
+                                    <outlet property="containerView" destination="yl4-fL-sYH" id="5oo-qF-NyQ"/>
+                                    <outlet property="containerViewTop" destination="EHf-8g-rSf" id="NhJ-mP-cnT"/>
+                                    <outlet property="foregroundView" destination="Oli-xY-FoO" id="woQ-YA-1gd"/>
+                                    <outlet property="foregroundViewTop" destination="FGS-XI-rSF" id="bXF-L4-Uj8"/>
+                                    <outlet property="openedCell" destination="yl4-fL-sYH" id="gyH-sk-gXZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -321,6 +410,7 @@
                             <outlet property="delegate" destination="Fh1-0p-7Vn" id="b5b-zu-HkK"/>
                         </connections>
                     </tableView>
+                    <nil key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaP-TE-tUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -589,7 +679,7 @@
                         <viewControllerLayoutGuide type="top" id="mgr-ZB-Vbd"/>
                         <viewControllerLayoutGuide type="bottom" id="LUZ-Vl-tAY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zLL-sX-aMw">
+                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="zLL-sX-aMw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -636,7 +726,7 @@
                                 </variation>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Fdy-Zp-ar7"/>

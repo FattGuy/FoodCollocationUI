@@ -18,6 +18,8 @@
 		F285E1881D145D280007AEB1 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285E1871D145D280007AEB1 /* BaseNavController.swift */; };
 		F285E18A1D145D570007AEB1 /* IngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285E1891D145D570007AEB1 /* IngredientViewController.swift */; };
 		F29A72341D18505800BC1E66 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A72331D18505800BC1E66 /* SideMenuViewController.swift */; };
+		F2A14B441D18754700F2C92F /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A14B431D18754700F2C92F /* SearchResultViewController.swift */; };
+		F2A14B461D18756000F2C92F /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A14B451D18756000F2C92F /* SearchResultCell.swift */; };
 		F2B315391D147C1F0055AB20 /* CategoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B315381D147C1F0055AB20 /* CategoryDetailCell.swift */; };
 		F2DEA1CE1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DEA1CD1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		F285E1871D145D280007AEB1 /* BaseNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
 		F285E1891D145D570007AEB1 /* IngredientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientViewController.swift; sourceTree = "<group>"; };
 		F29A72331D18505800BC1E66 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		F2A14B431D18754700F2C92F /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		F2A14B451D18756000F2C92F /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		F2B315381D147C1F0055AB20 /* CategoryDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailCell.swift; sourceTree = "<group>"; };
 		F2DEA1CD1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuillotineMenuTransitionAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,8 +135,8 @@
 		F208BBF71D11D21A00C9E957 /* FoodCollocationUI */ = {
 			isa = PBXGroup;
 			children = (
-				F2DEA1CC1D184CEB00A2E113 /* Lib */,
 				F208BBF81D11D21A00C9E957 /* AppDelegate.swift */,
+				F2DEA1CC1D184CEB00A2E113 /* Lib */,
 				F208BC2A1D11FC3200C9E957 /* Storyboards */,
 				F208BBFF1D11D21A00C9E957 /* Assets.xcassets */,
 				F208BC011D11D21A00C9E957 /* LaunchScreen.storyboard */,
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				F2B2C4411D134D100059E39C /* View */,
+				F2A14B411D1874EF00F2C92F /* SearchResult */,
 				F2DEA1C91D1842B400A2E113 /* SideMenu */,
 				F2C2B6681D1305E100FFC906 /* Nav */,
 				F2C2B6651D12FC1200FFC906 /* Ingredients */,
@@ -177,6 +182,23 @@
 				F208BC261D11D9BE00C9E957 /* HomeViewController.swift */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		F2A14B411D1874EF00F2C92F /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				F2A14B421D18752B00F2C92F /* Cell */,
+				F2A14B431D18754700F2C92F /* SearchResultViewController.swift */,
+			);
+			name = SearchResult;
+			sourceTree = "<group>";
+		};
+		F2A14B421D18752B00F2C92F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F2A14B451D18756000F2C92F /* SearchResultCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		F2B2C4411D134D100059E39C /* View */ = {
@@ -416,6 +438,8 @@
 				F285E18A1D145D570007AEB1 /* IngredientViewController.swift in Sources */,
 				F29A72341D18505800BC1E66 /* SideMenuViewController.swift in Sources */,
 				F285E1881D145D280007AEB1 /* BaseNavController.swift in Sources */,
+				F2A14B441D18754700F2C92F /* SearchResultViewController.swift in Sources */,
+				F2A14B461D18756000F2C92F /* SearchResultCell.swift in Sources */,
 				F208BC271D11D9BE00C9E957 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
