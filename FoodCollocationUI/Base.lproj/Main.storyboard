@@ -270,11 +270,16 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="tId-Gq-DKf">
-                        <barButtonItem key="leftBarButtonItem" image="home_menu_bar_button" id="jVZ-ef-s1Y">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="MYL-m9-Dz5">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zy1-3v-lwP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="home_menu_bar_button"/>
+                                <connections>
+                                    <action selector="showMenuAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QDz-AW-dKX"/>
+                                </connections>
+                            </button>
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="ceL-8K-JgY" kind="show" id="ZZR-i3-bg9"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -284,7 +289,9 @@
                         <outlet property="forMenButton" destination="Wxh-Zr-9AG" id="VlL-Cb-GSx"/>
                         <outlet property="forTransformerButton" destination="hAi-Zs-0yH" id="Csu-El-1BN"/>
                         <outlet property="forWomenbButton" destination="ckE-GZ-cb6" id="Y7M-ID-N93"/>
+                        <outlet property="menuButton" destination="zy1-3v-lwP" id="f77-Dg-dzR"/>
                         <outlet property="submitButton" destination="LY0-nk-G5C" id="tR8-tD-IcX"/>
+                        <segue destination="ceL-8K-JgY" kind="show" identifier="toMenuSegue" id="0Ah-HP-wYQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -652,7 +659,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="ISY-bS-HzI">
-                        <barButtonItem key="leftBarButtonItem" image="home_menu_bar_button" id="7Ap-nn-ma8"/>
+                        <barButtonItem key="leftBarButtonItem" id="7Ap-nn-ma8"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGZ-aI-wHc" userLabel="First Responder" sceneMemberID="firstResponder"/>

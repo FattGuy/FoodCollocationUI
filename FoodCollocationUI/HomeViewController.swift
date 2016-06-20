@@ -17,6 +17,9 @@ class HomeViewController: UIViewController, UIViewControllerTransitioningDelegat
     @IBOutlet weak var forTransformerButton: UIButton!
     @IBOutlet weak var forIntermediateButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var menuButton: UIButton!
+    
+    private lazy var presentationAnimator = GuillotineTransitionAnimation()
     
     var choiseButtons = [UIButton]()
     
@@ -26,10 +29,19 @@ class HomeViewController: UIViewController, UIViewControllerTransitioningDelegat
         // Do any additional setup after loading the view.
         disNavAppear()
         frameButtons()
-        
-        let menuViewController = storyboard!.instantiateViewControllerWithIdentifier("SideMenuViewController")
-        menuViewController.modalPresentationStyle = .Custom
-        menuViewController.transitioningDelegate = self
+    }
+
+    @IBAction func showMenuAction(sender: UIButton) {
+        let menuVC = storyboard!.instantiateViewControllerWithIdentifier("SideMenuViewController")
+        menuVC.modalPresentationStyle = .Custom
+        menuVC.transitioningDelegate = self
+        if menuVC is GuillotineAnimationDelegate {
+            presentationAnimator.animationDelegate = menuVC as? GuillotineAnimationDelegate
+        }
+        presentationAnimator.supportView = self.navigationController?.navigationBar
+        presentationAnimator.presentButton = sender
+        presentationAnimator.duration = 0.6
+        self.presentViewController(menuVC, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,4 +69,15 @@ class HomeViewController: UIViewController, UIViewControllerTransitioningDelegat
             button.layer.borderWidth = 0.5
         }
     }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        presentationAnimator.mode = .Presentation
+        return presentationAnimator
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        presentationAnimator.mode = .Dismissal
+        return presentationAnimator
+    }
 }
+

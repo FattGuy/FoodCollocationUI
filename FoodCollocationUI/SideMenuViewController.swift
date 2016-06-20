@@ -8,12 +8,18 @@
 
 import UIKit
 
-class SideMenuViewController: UIViewController, GuillotineMenu {
+class SideMenuViewController: UIViewController, GuillotineMenu, GuillotineAnimationDelegate {
+    
+    var dismissButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        dismissButton = UIButton(frame: CGRectZero)
+        dismissButton.setImage(UIImage(named: "home_menu_bar_button"), forState: .Normal)
+        dismissButton.addTarget(self, action: #selector(dismissButtonTapped(_:)), forControlEvents: .TouchUpInside)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +27,10 @@ class SideMenuViewController: UIViewController, GuillotineMenu {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func dismissButtonTapped(sende: UIButton) {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +40,4 @@ class SideMenuViewController: UIViewController, GuillotineMenu {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
