@@ -11,9 +11,9 @@ import FoldingCell
 
 class SearchResultViewController: UITableViewController {
 
-    let kCloseCellHeight: CGFloat = 75 // equal or greater foregroundView height
-    let kOpenCellHeight: CGFloat = 456 // equal or greater containerView height
-    let kRowsCount = 4
+    let kCloseCellHeight: CGFloat = 179 // equal or greater foregroundView height
+    let kOpenCellHeight: CGFloat = 488 // equal or greater containerView height
+    let kRowsCount = 10
     
     var cellHeights = [CGFloat]()
     
@@ -30,7 +30,7 @@ class SearchResultViewController: UITableViewController {
     
     func createCellHeightsArray() {
         for _ in 0...kRowsCount {
-            cellHeights.append(kCloseCellHeight * 2)
+            cellHeights.append(kCloseCellHeight)
         }
     }
     
@@ -45,7 +45,7 @@ class SearchResultViewController: UITableViewController {
         } else {// close cell
             cellHeights[indexPath.row] = kCloseCellHeight
             cell.selectedAnimation(false, animated: true, completion: nil)
-            duration = 1.1
+            duration = 0.8
         }
         
         UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
@@ -85,7 +85,7 @@ class SearchResultViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 10
     }
 
     

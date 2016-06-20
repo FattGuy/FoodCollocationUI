@@ -302,35 +302,18 @@
         <scene sceneID="bKv-zZ-dvT">
             <objects>
                 <tableViewController id="Fh1-0p-7Vn" customClass="SearchResultViewController" customModule="FoodCollocationUI" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="774" sectionHeaderHeight="28" sectionFooterHeight="28" id="txT-l4-ms0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="667" sectionHeaderHeight="28" sectionFooterHeight="28" id="txT-l4-ms0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoldingCell" rowHeight="774" id="eKp-nG-jvo" customClass="SearchResultCell" customModule="FoodCollocationUI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoldingCell" rowHeight="667" id="eKp-nG-jvo" customClass="SearchResultCell" customModule="FoodCollocationUI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="774"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKp-nG-jvo" id="6mT-l5-VC3">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="773.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-fL-sYH" userLabel="Content View">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <color key="backgroundColor" red="0.75560349225997925" green="0.94411581754684448" blue="0.80391615629196167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="350" id="5iN-vE-00O"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="5iN-vE-00O"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="5iN-vE-00O"/>
-                                                </mask>
-                                            </variation>
-                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oli-xY-FoO" customClass="RotatedView" customModule="FoldingCell">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -348,6 +331,23 @@
                                                 </mask>
                                             </variation>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-fL-sYH" userLabel="Content View">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <color key="backgroundColor" red="0.75560349225997925" green="0.94411581754684448" blue="0.80391615629196167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="350" id="5iN-vE-00O"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="5iN-vE-00O"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="5iN-vE-00O"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="yl4-fL-sYH" firstAttribute="top" secondItem="6mT-l5-VC3" secondAttribute="top" constant="97" identifier="ContainerViewTop" id="EHf-8g-rSf"/>
@@ -360,8 +360,8 @@
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
-                                            <exclude reference="yl4-fL-sYH"/>
                                             <exclude reference="Oli-xY-FoO"/>
+                                            <exclude reference="yl4-fL-sYH"/>
                                         </mask>
                                         <mask key="constraints">
                                             <exclude reference="FGS-XI-rSF"/>
@@ -375,8 +375,8 @@
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
                                         <mask key="subviews">
-                                            <include reference="yl4-fL-sYH"/>
                                             <include reference="Oli-xY-FoO"/>
+                                            <include reference="yl4-fL-sYH"/>
                                         </mask>
                                         <mask key="constraints">
                                             <include reference="FGS-XI-rSF"/>
@@ -410,7 +410,6 @@
                             <outlet property="delegate" destination="Fh1-0p-7Vn" id="b5b-zu-HkK"/>
                         </connections>
                     </tableView>
-                    <nil key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaP-TE-tUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
