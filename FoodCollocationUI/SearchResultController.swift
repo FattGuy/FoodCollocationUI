@@ -1,21 +1,22 @@
 //
-//  SearchResultViewController.swift
+//  SearchResultController.swift
 //  FoodCollocationUI
 //
-//  Created by Feng Chang on 6/20/16.
+//  Created by Feng Chang on 6/21/16.
 //  Copyright © 2016 Feng Chang. All rights reserved.
 //
 
 import UIKit
 import FoldingCell
 
-class SearchResultViewController: UITableViewController {
-
-    let kCloseCellHeight: CGFloat = 179 // equal or greater foregroundView height
-    let kOpenCellHeight: CGFloat = 488 // equal or greater containerView height
-    let kRowsCount = 10
+class SearchResultController: UITableViewController {
+    
+    let kCloseCellHeight: CGFloat = 150 // equal or greater foregroundView height
+    let kOpenCellHeight: CGFloat = 300 // equal or greater containerView height
     
     var cellHeights = [CGFloat]()
+    let kRowsCount = 5
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,57 +26,16 @@ class SearchResultViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        createCellHeightsArray()
-    }
-    
-    func createCellHeightsArray() {
         for _ in 0...kRowsCount {
             cellHeights.append(kCloseCellHeight)
         }
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! FoldingCell
-        
-        var duration = 0.0
-        if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
-            cellHeights[indexPath.row] = kOpenCellHeight
-            cell.selectedAnimation(true, animated: true, completion: nil)
-            duration = 0.5
-        } else {// close cell
-            cellHeights[indexPath.row] = kCloseCellHeight
-            cell.selectedAnimation(false, animated: true, completion: nil)
-            duration = 0.8
-        }
-        
-        UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
-            tableView.beginUpdates()
-            tableView.endUpdates()
-            }, completion: nil)
-    }
 
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if cell is FoldingCell {
-            let foldingCell = cell as! FoldingCell
-            
-            if cellHeights[indexPath.row] == kCloseCellHeight {
-                foldingCell.selectedAnimation(false, animated: false, completion:nil)
-            } else {
-                foldingCell.selectedAnimation(true, animated: false, completion: nil)
-            }
-        }
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return cellHeights[indexPath.row]
-    }
-    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -85,15 +45,51 @@ class SearchResultViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return 5
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return cellHeights[indexPath.row]
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! SearchResultCell
+        
+        var duration = 0.0
+        if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
+            cellHeights[indexPath.row] = kOpenCellHeight
+            cell.selectedAnimation(true, animated: true, completion: nil)
+            duration = 0.5
+        } else {// close cell
+            cellHeights[indexPath.row] = kCloseCellHeight
+            cell.selectedAnimation(false, animated: true, completion: nil)
+            duration = 1.1
+        }
+        
+        UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            }, completion: nil)
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if cell is SearchResultCell {
+            let searchResultCell = cell as! SearchResultCell
+            
+            if cellHeights[indexPath.row] == kCloseCellHeight {
+                searchResultCell.selectedAnimation(false, animated: false, completion:nil)
+            } else {
+                searchResultCell.selectedAnimation(true, animated: false, completion: nil)
+            }
+        }
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FoldingCell", forIndexPath: indexPath) as! SearchResultCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("SearchResultCell", forIndexPath: indexPath)
 
         // Configure the cell...
-        //cell.setCellValue()
 
         return cell
     }

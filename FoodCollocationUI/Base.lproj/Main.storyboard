@@ -272,7 +272,7 @@
                     <navigationItem key="navigationItem" id="tId-Gq-DKf">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="MYL-m9-Dz5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zy1-3v-lwP">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="20" y="7" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="home_menu_bar_button"/>
                                 <connections>
@@ -298,110 +298,128 @@
             </objects>
             <point key="canvasLocation" x="3015" y="548.25"/>
         </scene>
-        <!--Search Result View Controller-->
+        <!--Search Result Controller-->
         <scene sceneID="bKv-zZ-dvT">
             <objects>
-                <tableViewController id="Fh1-0p-7Vn" customClass="SearchResultViewController" customModule="FoodCollocationUI" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="667" sectionHeaderHeight="28" sectionFooterHeight="28" id="txT-l4-ms0">
+                <tableViewController id="Fh1-0p-7Vn" customClass="SearchResultController" customModule="FoodCollocationUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="398" sectionHeaderHeight="28" sectionFooterHeight="28" id="txT-l4-ms0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoldingCell" rowHeight="667" id="eKp-nG-jvo" customClass="SearchResultCell" customModule="FoodCollocationUI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="774"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="398" id="1VN-9c-zPG" customClass="SearchResultCell" customModule="FoodCollocationUI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="398"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKp-nG-jvo" id="6mT-l5-VC3">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="773.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1VN-9c-zPG" id="2MC-Dd-yTi">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="397.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oli-xY-FoO" customClass="RotatedView" customModule="FoldingCell">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="75" id="M7q-Tc-Gy6"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="M7q-Tc-Gy6"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="constraints">
-                                                    <include reference="M7q-Tc-Gy6"/>
-                                                </mask>
-                                            </variation>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-fL-sYH" userLabel="Content View">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxE-Tg-h7v" customClass="RotatedView" customModule="FoldingCell">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <color key="backgroundColor" red="0.75560349225997925" green="0.94411581754684448" blue="0.80391615629196167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="350" id="5iN-vE-00O"/>
+                                                <constraint firstAttribute="height" constant="75" id="EFr-pM-0bX"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="5iN-vE-00O"/>
+                                                    <exclude reference="EFr-pM-0bX"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="constraints">
-                                                    <include reference="5iN-vE-00O"/>
+                                                    <include reference="EFr-pM-0bX"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmt-KK-cao">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="280" id="Px6-05-kni">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="280"/>
+                                                </constraint>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Px6-05-kni"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="Px6-05-kni"/>
                                                 </mask>
                                             </variation>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="yl4-fL-sYH" firstAttribute="top" secondItem="6mT-l5-VC3" secondAttribute="top" constant="97" identifier="ContainerViewTop" id="EHf-8g-rSf"/>
-                                        <constraint firstItem="Oli-xY-FoO" firstAttribute="top" secondItem="6mT-l5-VC3" secondAttribute="top" constant="8" identifier="foregroundViewTop" id="FGS-XI-rSF"/>
-                                        <constraint firstItem="Oli-xY-FoO" firstAttribute="leading" secondItem="6mT-l5-VC3" secondAttribute="leading" constant="8" id="M7l-vq-m18"/>
-                                        <constraint firstAttribute="trailing" secondItem="yl4-fL-sYH" secondAttribute="trailing" constant="8" id="lDx-Zl-PsV"/>
-                                        <constraint firstItem="yl4-fL-sYH" firstAttribute="leading" secondItem="6mT-l5-VC3" secondAttribute="leading" constant="8" id="oZA-vR-1Ll"/>
-                                        <constraint firstAttribute="trailing" secondItem="Oli-xY-FoO" secondAttribute="trailing" constant="8" id="wJy-GY-OTW"/>
-                                        <constraint firstItem="yl4-fL-sYH" firstAttribute="top" secondItem="Oli-xY-FoO" secondAttribute="bottom" constant="14" id="yhH-Jj-eQC"/>
+                                        <constraint firstItem="vmt-KK-cao" firstAttribute="leading" secondItem="2MC-Dd-yTi" secondAttribute="leading" constant="8" id="60b-1z-SrI">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                                        </constraint>
+                                        <constraint firstAttribute="trailing" secondItem="vmt-KK-cao" secondAttribute="trailing" constant="9" id="Db0-XM-SCU">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                                        </constraint>
+                                        <constraint firstAttribute="trailing" secondItem="QxE-Tg-h7v" secondAttribute="trailing" constant="80" id="J3N-dK-ZTy">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                                        </constraint>
+                                        <constraint firstItem="vmt-KK-cao" firstAttribute="top" secondItem="2MC-Dd-yTi" secondAttribute="top" constant="91" identifier="containerViewTop" id="qkU-0d-UWf"/>
+                                        <constraint firstItem="QxE-Tg-h7v" firstAttribute="leading" secondItem="2MC-Dd-yTi" secondAttribute="leading" constant="8" id="sv8-Vy-ZFE"/>
+                                        <constraint firstItem="QxE-Tg-h7v" firstAttribute="top" secondItem="2MC-Dd-yTi" secondAttribute="top" constant="8" identifier="foregroundViewTop" id="vJi-r4-svj"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
-                                            <exclude reference="Oli-xY-FoO"/>
-                                            <exclude reference="yl4-fL-sYH"/>
+                                            <exclude reference="QxE-Tg-h7v"/>
+                                            <exclude reference="vmt-KK-cao"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="FGS-XI-rSF"/>
-                                            <exclude reference="M7l-vq-m18"/>
-                                            <exclude reference="wJy-GY-OTW"/>
-                                            <exclude reference="EHf-8g-rSf"/>
-                                            <exclude reference="lDx-Zl-PsV"/>
-                                            <exclude reference="oZA-vR-1Ll"/>
-                                            <exclude reference="yhH-Jj-eQC"/>
+                                            <exclude reference="J3N-dK-ZTy"/>
+                                            <exclude reference="sv8-Vy-ZFE"/>
+                                            <exclude reference="vJi-r4-svj"/>
+                                            <exclude reference="60b-1z-SrI"/>
+                                            <exclude reference="Db0-XM-SCU"/>
+                                            <exclude reference="qkU-0d-UWf"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
                                         <mask key="subviews">
-                                            <include reference="Oli-xY-FoO"/>
-                                            <include reference="yl4-fL-sYH"/>
+                                            <include reference="QxE-Tg-h7v"/>
+                                            <include reference="vmt-KK-cao"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="FGS-XI-rSF"/>
-                                            <include reference="M7l-vq-m18"/>
-                                            <include reference="wJy-GY-OTW"/>
-                                            <include reference="EHf-8g-rSf"/>
-                                            <include reference="lDx-Zl-PsV"/>
-                                            <include reference="oZA-vR-1Ll"/>
-                                            <include reference="yhH-Jj-eQC"/>
+                                            <include reference="J3N-dK-ZTy"/>
+                                            <include reference="sv8-Vy-ZFE"/>
+                                            <include reference="vJi-r4-svj"/>
+                                            <include reference="60b-1z-SrI"/>
+                                            <include reference="Db0-XM-SCU"/>
+                                            <include reference="qkU-0d-UWf"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="itemCount">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backViewColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="closedCell" destination="Oli-xY-FoO" id="dgf-JP-uaz"/>
-                                    <outlet property="containerView" destination="yl4-fL-sYH" id="5oo-qF-NyQ"/>
-                                    <outlet property="containerViewTop" destination="EHf-8g-rSf" id="NhJ-mP-cnT"/>
-                                    <outlet property="foregroundView" destination="Oli-xY-FoO" id="woQ-YA-1gd"/>
-                                    <outlet property="foregroundViewTop" destination="FGS-XI-rSF" id="bXF-L4-Uj8"/>
-                                    <outlet property="openedCell" destination="yl4-fL-sYH" id="gyH-sk-gXZ"/>
+                                    <outlet property="containerView" destination="vmt-KK-cao" id="Ucv-un-Esb"/>
+                                    <outlet property="containerViewTop" destination="qkU-0d-UWf" id="1cj-df-ArU"/>
+                                    <outlet property="foregroundView" destination="QxE-Tg-h7v" id="jPf-CT-E4T"/>
+                                    <outlet property="foregroundViewTop" destination="vJi-r4-svj" id="YkO-pK-Ltz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -413,7 +431,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaP-TE-tUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2571" y="1432.5"/>
+            <point key="canvasLocation" x="2442" y="1411.5"/>
         </scene>
         <!--Ingredient View Controller-->
         <scene sceneID="T1c-MN-vmd">
