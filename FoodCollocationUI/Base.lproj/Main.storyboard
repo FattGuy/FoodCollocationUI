@@ -713,6 +713,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="202" y="186" width="51" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="clickToPlanView:" destination="ceL-8K-JgY" eventType="touchUpInside" id="c2z-IH-Rpf"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7LC-Sv-Eiu">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -768,10 +771,35 @@
                     <navigationItem key="navigationItem" title="Menu" id="ISY-bS-HzI">
                         <barButtonItem key="leftBarButtonItem" id="7Ap-nn-ma8"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myplanButton" destination="rRW-FW-FEQ" id="aJM-5W-06L"/>
+                        <outlet property="mystatsButton" destination="3b9-KX-UYK" id="GjT-yB-BYa"/>
+                        <outlet property="profileButton" destination="914-jP-Qbt" id="AsY-eJ-vI2"/>
+                        <segue destination="w6F-g2-U65" kind="popoverPresentation" identifier="showMyPlan" popoverAnchorView="rRW-FW-FEQ" id="BU4-Vd-DM1">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGZ-aI-wHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4014" y="548.25"/>
+            <point key="canvasLocation" x="3793.5" y="548.25"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="2Ff-G1-gSJ">
+            <objects>
+                <viewController id="w6F-g2-U65" customClass="PopUpViewController" customModule="FoodCollocationUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ne7-pl-lvp"/>
+                        <viewControllerLayoutGuide type="bottom" id="JrN-QZ-1RX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Y2-k7-FhA">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QSA-ST-LoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4570.5" y="548.25"/>
         </scene>
         <!--Base Nav Controller-->
         <scene sceneID="ipH-sM-xsd">

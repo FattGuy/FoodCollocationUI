@@ -22,6 +22,9 @@
 		F2B315391D147C1F0055AB20 /* CategoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B315381D147C1F0055AB20 /* CategoryDetailCell.swift */; };
 		F2D2E7AA1D19911F00976FF5 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2E7A91D19911F00976FF5 /* SearchResultController.swift */; };
 		F2DEA1CE1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DEA1CD1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift */; };
+		F2E4CF791D1ADAB200AA1319 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4CF781D1ADAB200AA1319 /* PlanView.swift */; };
+		F2E4CF7B1D1ADACA00AA1319 /* PlanView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E4CF7A1D1ADACA00AA1319 /* PlanView.xib */; };
+		F2E4CF7E1D1AE25D00AA1319 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4CF7D1D1AE25D00AA1319 /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		F2B315381D147C1F0055AB20 /* CategoryDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailCell.swift; sourceTree = "<group>"; };
 		F2D2E7A91D19911F00976FF5 /* SearchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
 		F2DEA1CD1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuillotineMenuTransitionAnimation.swift; sourceTree = "<group>"; };
+		F2E4CF781D1ADAB200AA1319 /* PlanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		F2E4CF7A1D1ADACA00AA1319 /* PlanView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanView.xib; sourceTree = "<group>"; };
+		F2E4CF7D1D1AE25D00AA1319 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +243,7 @@
 		F2DEA1C91D1842B400A2E113 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F2E4CF7C1D1AE22B00AA1319 /* PopUpView */,
 				F29A72331D18505800BC1E66 /* SideMenuViewController.swift */,
 			);
 			name = SideMenu;
@@ -248,6 +255,24 @@
 				F2DEA1CD1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift */,
 			);
 			name = Lib;
+			sourceTree = "<group>";
+		};
+		F2E4CF771D1ADA0600AA1319 /* PlanView */ = {
+			isa = PBXGroup;
+			children = (
+				F2E4CF781D1ADAB200AA1319 /* PlanView.swift */,
+				F2E4CF7A1D1ADACA00AA1319 /* PlanView.xib */,
+			);
+			name = PlanView;
+			sourceTree = "<group>";
+		};
+		F2E4CF7C1D1AE22B00AA1319 /* PopUpView */ = {
+			isa = PBXGroup;
+			children = (
+				F2E4CF771D1ADA0600AA1319 /* PlanView */,
+				F2E4CF7D1D1AE25D00AA1319 /* PopUpViewController.swift */,
+			);
+			name = PopUpView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +385,7 @@
 				F208BC031D11D21A00C9E957 /* LaunchScreen.storyboard in Resources */,
 				F208BC001D11D21A00C9E957 /* Assets.xcassets in Resources */,
 				F208BBFE1D11D21A00C9E957 /* Main.storyboard in Resources */,
+				F2E4CF7B1D1ADACA00AA1319 /* PlanView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,12 +461,14 @@
 				F208BBF91D11D21A00C9E957 /* AppDelegate.swift in Sources */,
 				F2B315391D147C1F0055AB20 /* CategoryDetailCell.swift in Sources */,
 				F2DEA1CE1D184D5000A2E113 /* GuillotineMenuTransitionAnimation.swift in Sources */,
+				F2E4CF7E1D1AE25D00AA1319 /* PopUpViewController.swift in Sources */,
 				F2D2E7AA1D19911F00976FF5 /* SearchResultController.swift in Sources */,
 				F285E18A1D145D570007AEB1 /* IngredientViewController.swift in Sources */,
 				F29A72341D18505800BC1E66 /* SideMenuViewController.swift in Sources */,
 				F285E1881D145D280007AEB1 /* BaseNavController.swift in Sources */,
 				F2A14B461D18756000F2C92F /* SearchResultCell.swift in Sources */,
 				F208BC271D11D9BE00C9E957 /* HomeViewController.swift in Sources */,
+				F2E4CF791D1ADAB200AA1319 /* PlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
