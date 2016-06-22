@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import NMPopUpViewSwift
 
-class PopUpViewController: PopUpViewControllerSwift {
+class PopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

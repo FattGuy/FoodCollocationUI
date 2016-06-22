@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import NMPopUpViewSwift
 
 class SideMenuViewController: UIViewController, GuillotineMenu, GuillotineAnimationDelegate, UIPopoverPresentationControllerDelegate {
     
